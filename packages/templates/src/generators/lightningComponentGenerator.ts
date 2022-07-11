@@ -174,12 +174,12 @@ export default class LightningComponentGenerator extends SfdxGenerator<
       );
       
       this.fs.copyTpl(
-        this.templatePath(`${template}constant.js`),
+        this.templatePath(`${template}.css`),
         this.destinationPath(
           path.join(
             outputdir,
             camelCaseComponentName,
-            `${camelCaseComponentName}constants.js`
+            `${camelCaseComponentName}.css`
           )
         ),
         {}
