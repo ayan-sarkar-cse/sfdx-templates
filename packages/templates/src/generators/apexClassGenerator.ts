@@ -34,5 +34,10 @@ export default class ApexClassGenerator extends SfdxGenerator<
         this.destinationPath(path.join(outputdir, `${classname}.cls-meta.xml`)),
         { apiName: classname, apiVersion: apiversion }
       );
+    this.fs.copyTpl(
+        this.templatePath('_class.cls-meta.xml'),
+        this.destinationPath(path.join(outputdir, `${classname}.cls-meta.xml`)),
+        { apiName: classname, apiVersion: apiversion }
+      );
   }
 }
